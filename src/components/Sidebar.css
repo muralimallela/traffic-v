@@ -1,0 +1,145 @@
+.con{
+    display: flex;
+    justify-content: space-between;
+}
+.side {
+    width: 18%;
+    height: 100vh;
+    padding: 10px;
+    background-color: #060A0D;
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.side img {
+    width: 80%;
+    height: 20%;
+}
+
+.side .line {
+    width: 90%;
+    height: 2px;
+    border: solid;
+}
+
+.btn {
+    margin: 3%;
+    width: 100%;
+    height: 6vh;
+    text-align: center;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    color: white;
+    border: none;
+}
+
+.bg1 {
+    background-color: #8B68F7;
+    color: white;
+    text-decoration: none;
+}
+.link {
+    color: white;
+    text-decoration: none; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.bg2 {
+    background-color: #1F2630;
+}
+
+.lg {
+    background-color: transparent;
+    border: solid;
+    margin-bottom: 8%;
+}
+
+.bg3 {
+    background-color: transparent;
+    transition: all ease .5s;
+}
+
+.dropdown {
+    list-style: none;
+    margin-left: -5%;
+    color: white;
+    transition: all ease-in-out .5s;
+}
+
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: 0.4s;
+}
+.nav {
+    height: 8vh;
+    position: relative;
+    top: 10px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end; 
+}
+
+.nav img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+@media (max-width: 768px) {
+    .side {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        transform: translateX(-100%);
+    }
+
+    .side.open {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        /* border: solid; */
+        display: block;
+        /* color: aliceblue; */
+    }
+    .top{
+        margin-top: 15%;
+    }
+    .nav { 
+        margin-left: 80%;
+        /* border: solid; */
+        position: relative;
+        right: 0;
+        display: flex;
+        justify-content: flex-end; 
+    }
+}
+
+@media (max-width: 480px) {
+    .side {
+        width: 200px;
+    }
+}
